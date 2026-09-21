@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка | Александр Новиков</title>
+    <style>
+        /* Сброс базовых отступов */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Глубокий сине-черный фон */
+            background-color: #090d16;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            
+            /* Центрирование всей карточки по вертикали и горизонтали */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Центральная карточка контента */
+        .card {
+            background-color: #000000; /* Чистый черный фон */
+            border: 1px solid #ffffff; /* Тонкая белая обводка */
+            border-radius: 16px;       /* Аккуратное скругление углов */
+            width: 100%;
+            max-width: 400px;          /* Оптимальная ширина для мобильных и десктопов */
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;                  /* Расстояние между элементами внутри */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Общие стили для кнопок-ссылок */
+        .btn {
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 14px 20px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+            cursor: pointer;
+        }
+
+        /* Эффект при наведении и клике */
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Стили конкретных кнопок */
+        .btn-tg {
+            background-color: #24A1DE; /* Фирменный голубой Telegram */
+        }
+
+        .btn-vk {
+            background-color: #0077FF; /* Глубокий синий ВКонтакте */
+        }
+
+        /* Плашка с номером телефона (статичная) */
+        .phone-plate {
+            background-color: #ffffff; /* Чистый белый фон */
+            color: #000000;            /* Черный текст */
+            font-weight: bold;         /* Жирный шрифт */
+            font-size: 18px;
+            padding: 14px 20px;
+            border-radius: 8px;
+            display: block;
+            text-align: center;
+            user-select: all;          /* Позволяет легко скопировать номер */
+        }
+
+        /* Подвал внутри карточки */
+        .footer-text {
+            margin-top: 10px;
+            color: #a0a0a0;            /* Приглушенный светло-серый */
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        /* Адаптивность для очень маленьких экранов */
+        @media (max-width: 320px) {
+            .card {
+                padding: 30px 20px;
+            }
+            .btn, .phone-plate {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <!-- Кнопка Telegram -->
+        <!-- ЗАМЕНИТЕ '#' на вашу ссылку (например, https://t.me/username) -->
+        <a href="https://t.me/EyeAndPain" class="btn btn-tg" target="_blank" rel="noopener noreferrer">
+            Telegram
+        </a>
+
+        <!-- Кнопка ВКонтакте -->
+        <!-- ЗАМЕНИТЕ '#' на вашу ссылку (например, https://vk.com/id123) -->
+        <a href="https://vk.ru/eyesalws" class="btn btn-vk" target="_blank" rel="noopener noreferrer">
+            ВКонтакте
+        </a>
+
+        <!-- Статичная плашка с номером телефона -->
+        <!-- ЗАМЕНИТЕ +7 (000) 000-00-00 на ваш реальный номер -->
+        <div class="phone-plate">
+            +7 (911) 319-84-42
+        </div>
+
+        <!-- Подвал с именем -->
+        <div class="footer-text">
+            Александр Новиков
+        </div>
+    </main>
+
+</body>
+</html>
